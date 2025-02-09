@@ -4,6 +4,8 @@
     padding: 0;
 
     color: var(--text-color);
+
+    font-family: "KoHo", serif;
 }
 
 :root {
@@ -25,6 +27,8 @@ body {
 
 h1 {
     font-size: 4rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
 h3 {
@@ -44,4 +48,13 @@ h3 {
 
 #menu li img {
     width: 45px;
+}
+
+#menu li {
+    cursor: pointer;
+    transition: transform .6s;
+}
+
+#menu li:hover {
+    transform: scale(1.2);
 }
