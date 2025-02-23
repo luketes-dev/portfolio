@@ -1,3 +1,28 @@
+/* MENU BUTTONS */
+const sobreMimButton = document.querySelector('#sobre-mim-button')
+const projetosButton = document.querySelector('#projetos-button')
+
+const containerSobreMim = document.querySelector("#sobre-mim-container")
+const containerProjetos = document.querySelector('#projetos-container')
+
+const dados = document.getElementById('dados')
+const main = document.querySelector('main')
+
+const titulo = document.getElementById('titulo')
+const closeButton = document.querySelector("#close-button")
+
+sobreMimButton.addEventListener('click', () => {
+  dados.style.display = 'none'
+  titulo.innerText = 'Sobre Mim'
+  main.style.display = 'block'
+  containerSobreMim.style.display = 'flex'
+})
+
+closeButton.addEventListener('click', () => {
+  main.style.display = 'none'
+  dados.style.display = 'block'
+})
+
 particlesJS('particles-js',
     {
       "particles": {

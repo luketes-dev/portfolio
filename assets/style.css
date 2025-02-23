@@ -32,10 +32,6 @@ header {
     justify-content: center;
 }
 
-.dados {
-    display: none;
-}
-
 h1 {
     font-size: 4rem;
     font-weight: 600;
@@ -81,10 +77,11 @@ nav {
 }
 
 main {
+    display: none;
     height: 100vh;
 }
 
-.titulo {
+#titulo {
     font-size: 3rem;
     text-align: center;
 
@@ -117,7 +114,7 @@ main {
 
 /* SOBRE MIM */
 #sobre-mim-container {
-    display: flex;
+    display: none;
     gap: 100px;
     margin: 0px 100px;
     justify-content: center;
