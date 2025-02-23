@@ -132,3 +132,55 @@ p {
     border: 1px solid #fafafa;
     border-radius: 50%;
 }
+
+/* PROJETOS */
+
+#projetos-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrosel-projetos {
+    display: flex;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+
+    transition: transform .7s;
+
+    cursor: pointer;
+    padding: 20px;
+}
+
+.projetos:hover {
+    transform: scale(1.1);
+}
+
+.imagem-projeto {
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.titulo-projeto {
+    padding: 10px 0px;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #98989840;
+    text-transform: uppercase;
+}
+
+#previous, #next {
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+}

@@ -12,16 +12,26 @@ const titulo = document.getElementById('titulo')
 const closeButton = document.querySelector("#close-button")
 
 sobreMimButton.addEventListener('click', () => {
-  dados.style.display = 'none'
-  titulo.innerText = 'Sobre Mim'
-  main.style.display = 'block'
-  containerSobreMim.style.display = 'flex'
+  abrirJanela(containerSobreMim, 'Sobre Mim')
+})
+
+projetosButton.addEventListener('click', () => {
+  abrirJanela(containerProjetos, 'Meus Projetos')
 })
 
 closeButton.addEventListener('click', () => {
   main.style.display = 'none'
   dados.style.display = 'block'
+  containerSobreMim.style.display = 'none'
+  containerProjetos.style.display = 'none'
 })
+
+function abrirJanela(janela, tituloJanela) {
+  dados.style.display = 'none'
+  titulo.innerText = tituloJanela
+  main.style.display = 'block'
+  janela.style.display = 'flex'
+}
 
 particlesJS('particles-js',
     {
