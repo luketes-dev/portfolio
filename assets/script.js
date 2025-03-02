@@ -11,19 +11,33 @@ const main = document.querySelector('main')
 const titulo = document.getElementById('titulo')
 const closeButton = document.querySelector("#close-button")
 
+var janelaAberta
+
 sobreMimButton.addEventListener('click', () => {
-  abrirJanela(containerSobreMim, 'Sobre Mim')
+  // Verificar se tem janela aberta
+  if(verificaJanelaAberta()) {
+    // Se tiver, fechar janela e abrir a outra
+    fecharJanela()
+    abrirJanela(containerSobreMim, 'Sobre Mim')
+  } else {
+    // Se nao tiver, abrir janela
+    abrirJanela(containerSobreMim, 'Sobre Mim')
+  }
 })
 
 projetosButton.addEventListener('click', () => {
-  abrirJanela(containerProjetos, 'Meus Projetos')
+  console.log(janelaAberta)
+  console.log(verificaJanelaAberta())
+  if(verificaJanelaAberta()) {
+    fecharJanela()
+    abrirJanela(containerProjetos, 'Meus Projetos')
+  } else {
+    abrirJanela(containerProjetos, 'Meus Projetos')
+  }
 })
 
 closeButton.addEventListener('click', () => {
-  main.style.display = 'none'
-  dados.style.display = 'block'
-  containerSobreMim.style.display = 'none'
-  containerProjetos.style.display = 'none'
+  fecharJanela()
 })
 
 function abrirJanela(janela, tituloJanela) {
@@ -31,6 +45,23 @@ function abrirJanela(janela, tituloJanela) {
   titulo.innerText = tituloJanela
   main.style.display = 'block'
   janela.style.display = 'flex'
+  janelaAberta = tituloJanela
+}
+
+function fecharJanela() {
+  main.style.display = 'none'
+  dados.style.display = 'block'
+  verificaJanelaAberta().style.display = 'none'
+}
+
+function verificaJanelaAberta() {
+  if(janelaAberta == 'Sobre Mim') {
+    return containerSobreMim
+  } else if (janelaAberta == 'Meus Projetos') {
+    return containerProjetos
+  } else {
+    return false
+  }
 }
 
 particlesJS('particles-js',
