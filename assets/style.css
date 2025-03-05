@@ -189,8 +189,7 @@ p {
 #servicos-container {
     display: none;
     width: 100vw;
-    gap: 5rem;
-    margin: 9rem 0px 0px 8rem;
+    margin: 9rem 0px 0px 12rem;
 }
 
 .servicos {
@@ -228,4 +227,32 @@ p {
 .servico:hover {
     transform: scale(0.98);
     background: #D9D9D940;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    position: absolute;
+    top: 8rem;
+    right: 3rem;
+}
+
+#tecnologias {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    max-width: 110px;
+}
+
+.tecnologia-icon {
+    width: 50px;
+    filter: saturate(0);
+    transition: filter .5s;
+}
+
+.tecnologia-icon:hover {
+    filter: saturate(1);
 }
