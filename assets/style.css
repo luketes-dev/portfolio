@@ -84,8 +84,6 @@ main {
 #titulo {
     font-size: 3rem;
     text-align: center;
-
-    margin-bottom: 5rem;
 }
 
 #close-button {
@@ -119,6 +117,7 @@ main {
     margin: 0px 100px;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 
 p {
@@ -139,6 +138,7 @@ p {
     display: none;
     justify-content: center;
     align-items: center;
+    margin-top: 6rem;
 }
 
 .carrosel-projetos {
@@ -183,4 +183,49 @@ p {
     height: 50px;
 
     cursor: pointer;
+}
+
+/* SERVICOS */
+#servicos-container {
+    display: none;
+    width: 100vw;
+    gap: 5rem;
+    margin: 9rem 0px 0px 8rem;
+}
+
+.servicos {
+    display: flex;
+    gap: 30px;
+    flex-flow: row wrap;
+    max-width: 1000px;
+
+    padding: 15px;
+}
+
+.servico {
+    width: 300px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+
+    background: #D9D9D920;
+
+    padding: 20px 0px;
+    transition: .5s;
+}
+
+.icon-servico {
+    display: block;
+    margin: auto;
+    width: 80px;
+    padding-bottom: 15px;
+}
+
+.titulo-servico {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.servico:hover {
+    transform: scale(0.98);
+    background: #D9D9D940;
 }

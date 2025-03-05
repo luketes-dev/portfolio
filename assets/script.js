@@ -1,9 +1,11 @@
 /* MENU BUTTONS */
 const sobreMimButton = document.querySelector('#sobre-mim-button')
 const projetosButton = document.querySelector('#projetos-button')
+const servicosButton = document.querySelector('#servicos-button')
 
 const containerSobreMim = document.querySelector("#sobre-mim-container")
 const containerProjetos = document.querySelector('#projetos-container')
+const containerServicos = document.querySelector('#servicos-container')
 
 const dados = document.getElementById('dados')
 const main = document.querySelector('main')
@@ -16,8 +18,10 @@ var janelaAberta
 sobreMimButton.addEventListener('click', () => {
   // Verificar se tem janela aberta
   if(verificaJanelaAberta()) {
-    // Se tiver, fechar janela e abrir a outra
+    // Se tiver janela aberta
+    // fechar janela
     fecharJanela()
+    // Abrir outra janela
     abrirJanela(containerSobreMim, 'Sobre Mim')
   } else {
     // Se nao tiver, abrir janela
@@ -26,13 +30,20 @@ sobreMimButton.addEventListener('click', () => {
 })
 
 projetosButton.addEventListener('click', () => {
-  console.log(janelaAberta)
-  console.log(verificaJanelaAberta())
   if(verificaJanelaAberta()) {
     fecharJanela()
     abrirJanela(containerProjetos, 'Meus Projetos')
   } else {
     abrirJanela(containerProjetos, 'Meus Projetos')
+  }
+})
+
+servicosButton.addEventListener('click', () => {
+  if(verificaJanelaAberta()) {
+    fecharJanela()
+    abrirJanela(containerServicos, 'Serviços')
+  } else {
+    abrirJanela(containerServicos, 'Serviços')
   }
 })
 
@@ -59,6 +70,8 @@ function verificaJanelaAberta() {
     return containerSobreMim
   } else if (janelaAberta == 'Meus Projetos') {
     return containerProjetos
+  } else if (janelaAberta == 'Serviços') {
+    return containerServicos
   } else {
     return false
   }
