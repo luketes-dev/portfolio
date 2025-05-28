@@ -2,10 +2,12 @@
 const sobreMimButton = document.querySelector('#sobre-mim-button')
 const projetosButton = document.querySelector('#projetos-button')
 const servicosButton = document.querySelector('#servicos-button')
+const contatoButton = document.querySelector('#contato-button')
 
 const containerSobreMim = document.querySelector("#sobre-mim-container")
 const containerProjetos = document.querySelector('#projetos-container')
 const containerServicos = document.querySelector('#servicos-container')
+const containerContato = document.querySelector('#contato-container')
 
 const dados = document.getElementById('dados')
 const main = document.querySelector('main')
@@ -21,30 +23,30 @@ sobreMimButton.addEventListener('click', () => {
     // Se tiver janela aberta
     // fechar janela
     fecharJanela()
-    // Abrir outra janela
-    abrirJanela(containerSobreMim, 'Sobre Mim')
-  } else {
-    // Se nao tiver, abrir janela
-    abrirJanela(containerSobreMim, 'Sobre Mim')
   }
+  // Abrir outra janela
+  abrirJanela(containerSobreMim, 'Sobre Mim')
 })
 
 projetosButton.addEventListener('click', () => {
   if(verificaJanelaAberta()) {
     fecharJanela()
-    abrirJanela(containerProjetos, 'Meus Projetos')
-  } else {
-    abrirJanela(containerProjetos, 'Meus Projetos')
   }
+  abrirJanela(containerProjetos, 'Meus Projetos')
 })
 
 servicosButton.addEventListener('click', () => {
   if(verificaJanelaAberta()) {
     fecharJanela()
-    abrirJanela(containerServicos, 'Serviços')
-  } else {
-    abrirJanela(containerServicos, 'Serviços')
   }
+  abrirJanela(containerServicos, 'Serviços')
+})
+
+contatoButton.addEventListener('click', () => {
+  if(verificaJanelaAberta()) {
+    fecharJanela()
+  } 
+  abrirJanela(containerContato, 'Contato')
 })
 
 closeButton.addEventListener('click', () => {
@@ -72,6 +74,8 @@ function verificaJanelaAberta() {
     return containerProjetos
   } else if (janelaAberta == 'Serviços') {
     return containerServicos
+  } else if (janelaAberta == 'Contato'){
+    return containerContato
   } else {
     return false
   }

@@ -256,3 +256,83 @@ p {
 .tecnologia-icon:hover {
     filter: saturate(1);
 }
+
+/* CONTATO */
+#contato-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+#contato-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+#contato-container input, 
+#contato-container textarea {
+    background-color: transparent;
+    width: 22rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    padding: 2px;
+}
+
+#contato-container input {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+#contato-container textarea {
+    border: 2px solid #919191;
+    border-radius: 3px;
+    height: 10rem;
+}
+
+#contato-container input::placeholder,
+#contato-container textarea::placeholder {
+    font-style: italic;
+}
+
+#contato-container #button-send {
+    width: 100px;
+    padding: 6px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-style: italic;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+#contato-container #button-send:hover {
+    background-color: #717171;
+}
+
+#contato-container #social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 30px;
+    bottom: 13rem;
+}
+
+
+#contato-container #social-links img:nth-child(1),
+#contato-container #social-links img:nth-child(2) {
+    padding: 2px;
+}
+
+#contato-container #social-links img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform .8s;
+}
+
+#contato-container #social-links img:hover {
+    transform: scale(1.2);
+}
